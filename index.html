@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Us Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    
+    /* Base setup */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #010415;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .section {
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .section p {
+      color: #aaa;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .section h2 {
+      font-size: 3.0rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      margin-top: 10px;
+      
+    }
+    .gradient {
+      background: linear-gradient(90deg, #ff4b5c, #a64bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 11px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Glow only behind cards, not inside them */
+    .grid::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(ellipse at center, #e4e4f926 50%, rgba(126, 143, 208, 0) 20%);
+      z-index: -1; /* Keeps it behind the cards */
+      filter: blur(80px);
+    }
+
+    .icon img {
+  width: 40px;       /* make all icons same size */
+  height: 40px;
+  object-fit: contain; 
+  display: block;
+  margin: 0 auto 10px; /* center & add spacing */
+}
+.icon,
+.title {
+  transition: transform 0.4s ease;
+}
+
+ .card {
+  background: rgba(5, 0, 3, 0.45);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* keep centered baseline */
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  gap: 10px;
+  min-height: 220px; 
+}
+    .card:hover {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      transform: scale(1.05);
+    }
+
+    .card:hover::before {
+      opacity: 0;
+    }
+
+    .icon {
+      margin-bottom: 10px;
+       font-size: 1.0rem; /* or SVG size */
+  margin-bottom: 1px; /* adds gap between icon and title */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+    }
+
+    .title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: -11px;
+      z-index: 1;
+    
+    }
+.description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 200;           /* thinner like Figma */
+  font-size: 14px;            /* or 0.9rem */
+  line-height: 1.5;           /* adjust spacing */
+  letter-spacing: 0;          /* make sure no extra spacing */
+  text-align: center;
+  max-width: 300px;           /* give more width */
+  opacity: 0;
+}
+
+
+.icon,
+.title {
+  transition: transform 0.4s ease;
+}
+.card:hover .icon,
+.card:hover .title {
+  transform: translateY(-15px); /* smoothly moves up */
+}
+
+.card:hover .description {
+  opacity: 1;
+  transform: translateY(0); /*  slides in under title */
+}
+
+
+
+    .pill {
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 9999px;
+      background: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: black;
+      margin-bottom: 10px;
+      backdrop-filter: blur(10px);
+    }
+    .pill span {
+      color: #f43f5e;
+      font-weight: 700;
+    }
+
+    .card:hover .description {
+      opacity: 1;
+      transform: translateY(0);
+      margin-top: 10px;
+    }
+    
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="pill"><span>★</span> Why Us</div>
+    <h2><span class="gradient">The Results</span> Speak for Themselves</h2>
+      <div class="grid">
+  <div class="card">
+    <div class="icon">
+      <img src="clock.png" alt="Clarity Icon">
+    </div>
+    <div class="title">Clarity Before Complexity</div>
+    <div class="description">
+      Our approach ensures you master the fundamentals before facing complex ideas and real-world challenges.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">
+      <img src="shine.png" alt="Excellence Icon">
+    </div>
+    <div class="title">Driven by Excellence</div>
+    <div class="description">
+      We provide high-standard educational content, thoughtfully curated and presented by trusted experts.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">
+      <img src="desktop.png" alt="Practice Icon">
+    </div>
+    <div class="title">Practice at the Core</div>
+    <div class="description">
+      Every topic is designed with hands on learning, ensuring you can move from understanding concepts to building real solutions.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">
+      <img src="document.png" alt="Education Icon">
+    </div>
+    <div class="title">Education Without Barriers</div>
+    <div class="description">
+      We are committed to making knowledge universally accessible, giving every learner the chance to grow without limits.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">
+      <img src="people.png" alt="Trust Icon">
+    </div>
+    <div class="title">Built on Trust</div>
+    <div class="description">
+      We uphold honesty and transparency, creating a reliable learning space where every learner can thrive.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon">
+      <img src="star.png" alt="Community Icon">
+    </div>
+    <div class="title">Connected by Community</div>
+    <div class="description">
+       Beyond courses, we foster a community where curiosity meets connection, and learning becomes a shared journey.
+    </div>
+  </div>
+</div>
+
+
+   
+  </section>
+
+
+</body>
+</html>
