@@ -4,129 +4,132 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why Us Section</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body class="m-0 font-[Segoe_UI] bg-[#010415] text-white overflow-x-hidden">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&family=Bricolage+Grotesque:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <section class="relative text-center py-14 px-3 sm:py-16 sm:px-5">
+
+
+  
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com">
+
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+        bricolage: ['"Bricolage Grotesque"', 'sans-serif'],
+        jetbrains: ['"JetBrains Mono"', 'monospace'],
+        inter: ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+
+
+  </script>
+</head>
+<body class="bg-[#0D0D12] text-white font-['Plus Jakarta Sans'] overflow-x-hidden">
+
+  <section class="text-center relative px-5 py-20">
+    
     <!-- pill -->
-    <div class="inline-block px-4 py-1.5 rounded-full bg-white border border-white/20 
-                text-sm font-medium text-black mb-2 backdrop-blur-md">
-      <span class="text-pink-600 font-bold">★</span> Why Us
+    <div class="inline-block px-6 py-2 mb-7 rounded-full bg-white border border-white/20 text-[#1F2853] font-['JetBrains_Mono'] text-[16px] leading-[22.4px] tracking-[-0.32px] backdrop-blur">
+      <img src="vector.png" alt="star" class="inline-block align-middle"> 
+      Why Us
     </div>
+
+
+
+
     <!-- heading -->
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mt-2 mb-8">
-      <span class="bg-gradient-to-r from-[#ff4b5c] to-[#a64bff] bg-clip-text text-transparent">
-        The Results
-      </span>
-      Speak for Themselves
+    <h2 class="text-[44px] font-bold leading-snug mt-0 font-['Bricolage_Grotesque']">
+      <span class="bg-gradient-to-r from-[#ff4b5c] to-[#a64bff]  text-transparent bg-clip-text">The Results</span> Speak for<br>
+      Themselves
     </h2>
 
-    <!-- grid wrapper with glow -->
-    <div class="relative max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 z-10">
-      <div class="absolute top-1/2 left-1/2 w-full h-[70%] sm:h-[80%] lg:h-[90%] -translate-x-1/2 -translate-y-1/2 
-                  bg-[radial-gradient(ellipse_at_center,#e4e4f926_50%,rgba(126,143,208,0)_20%)] 
-                  blur-[65px] -z-10"></div>
+    <!-- grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-7xl mx-auto relative z-10 bg-[url('bg-glow.png')] bg-contain bg-center bg-no-repeat mt-10">
 
-      <!-- Card 1 -->
-      <div class="group relative flex flex-col items-center justify-center gap-2 min-h-[200px] p-3 sm:p-4 w-full
-                  text-center rounded-2xl bg-[rgba(5,0,3,0.45)] transition-colors duration-500 
-                  hover:bg-transparent hover:shadow-none overflow-hidden">
-        <div class="flex items-center justify-center mt-8 mb-1 transition-transform duration-300 group-hover:-translate-y-3">
-          <img src="clock.png" alt="Clarity Icon" class="w-9 h-9 object-contain mx-auto mb-2">
+      <!-- card 1 -->
+      <div class="rounded-2xl bg-[rgba(10,8,18,0.6)] p-5 text-center flex flex-col items-center justify-center gap-2 min-h-[160px] relative overflow-hidden transition-transform duration-500 hover:scale-105 hover:bg-transparent group">
+        <div class="mb-1 mt-12 transition-transform duration-500 group-hover:-translate-y-4">
+          <img src="clock.png" alt="Clarity Icon" class="w-10 h-10 object-contain mx-auto mb-2">
         </div>
-        <div class="font-['Plus_Jakarta_Sans'] text-lg sm:text-xl lg:text-2xl font-semibold mb-[-6px] z-10 transition-transform duration-300 group-hover:-translate-y-3">
+        <div class="text-[27px] font-semibold mb-[-11px] transition-transform duration-600 group-hover:-translate-y-4 font-['Plus Jakarta Sans', sans-serif]">
           Clarity Before Complexity
         </div>
-        <div class="opacity-0 translate-y-3 font-['Plus_Jakarta_Sans'] font-extralight text-sm leading-6 max-w-[270px] text-center break-words
-            transition-all duration-500 ease-out 
-            group-hover:opacity-100 group-hover:translate-y-0">
+        <div class="text-[16px] leading-relaxed text-center max-w-xs opacity-0 translate-y-2 transition duration-500 group-hover:opacity-100 group-hover:translate-y-0 mt-2 font-['Plus_Jakarta_Sans'] font-extralight">
           Our approach ensures you master the fundamentals before facing complex ideas and real-world challenges.
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="group relative flex flex-col items-center justify-center gap-2 min-h-[200px] p-3 sm:p-4 w-full
-                  text-center rounded-2xl bg-[rgba(5,0,3,0.45)] transition-colors duration-500 
-                  hover:bg-transparent hover:shadow-none overflow-hidden">
-        <div class="flex items-center justify-center mt-8 mb-1 transition-transform duration-300 group-hover:-translate-y-3">
-          <img src="shine.png" alt="Excellence Icon" class="w-9 h-9 object-contain mx-auto mb-2">
+ 
+     
+    
+      <!-- card 2 -->
+      <div class="rounded-2xl bg-[rgba(10,8,18,0.6)] p-5 text-center flex flex-col items-center justify-center gap-2 min-h-[160px] relative overflow-hidden transition-transform duration-500 hover:scale-105 hover:bg-transparent group">
+        <div class="mb-1 mt-12 transition-transform duration-500 group-hover:-translate-y-4">
+          <img src="shine.png" alt="Excellence Icon" class="w-10 h-10 object-contain mx-auto mb-2">
         </div>
-        <div class="font-['Plus_Jakarta_Sans'] text-lg sm:text-xl lg:text-2xl font-semibold mb-[-6px] z-10 transition-transform duration-300 group-hover:-translate-y-3">
+        <div class="text-[27px] font-semibold mb-[-11px] transition-transform duration-600 group-hover:-translate-y-4 font-['Plus Jakarta Sans', sans-serif]">
           Driven by Excellence
         </div>
-        <div class="opacity-0 translate-y-3 font-['Plus_Jakarta_Sans'] font-extralight text-sm leading-6 max-w-[270px] text-center break-words
-            transition-all duration-500 ease-out 
-            group-hover:opacity-100 group-hover:translate-y-0">
+        <div class="text-[16px] leading-relaxed text-center max-w-xs opacity-0 translate-y-2 transition duration-500 group-hover:opacity-100 group-hover:translate-y-0 mt-2 font-['Plus_Jakarta_Sans'] font-extralight">
           We provide high-standard educational content, thoughtfully curated and presented by trusted experts.
         </div>
       </div>
 
-      <!-- Card 3 -->
-      <div class="group relative flex flex-col items-center justify-center gap-2 min-h-[200px] p-3 sm:p-4 w-full
-                  text-center rounded-2xl bg-[rgba(5,0,3,0.45)] transition-colors duration-500 
-                  hover:bg-transparent hover:shadow-none overflow-hidden">
-        <div class="flex items-center justify-center mt-8 mb-1 transition-transform duration-300 group-hover:-translate-y-3">
-          <img src="desktop.png" alt="Practice Icon" class="w-9 h-9 object-contain mx-auto mb-2">
+      <!-- card 3 -->
+      <div class="rounded-2xl bg-[rgba(10,8,18,0.6)] p-5 text-center flex flex-col items-center justify-center gap-2 min-h-[160px] relative overflow-hidden transition-transform duration-500 hover:scale-105 hover:bg-transparent group">
+        <div class="mb-1 mt-12 transition-transform duration-500 group-hover:-translate-y-4">
+          <img src="desktop.png" alt="Practice Icon" class="w-10 h-10 object-contain mx-auto mb-2">
         </div>
-        <div class="font-['Plus_Jakarta_Sans'] text-lg sm:text-xl lg:text-2xl font-semibold mb-[-6px] z-10 transition-transform duration-300 group-hover:-translate-y-3">
+         <div class="text-[27px] font-semibold mb-[-11px] transition-transform duration-600 group-hover:-translate-y-4 font-['Plus Jakarta Sans', sans-serif]">
           Practice at the Core
         </div>
-        <div class="opacity-0 translate-y-3 font-['Plus_Jakarta_Sans'] font-extralight text-sm leading-6 max-w-[270px] text-center break-words
-            transition-all duration-500 ease-out 
-            group-hover:opacity-100 group-hover:translate-y-0">
+        <div class="text-[16px] leading-relaxed text-center max-w-xs opacity-0 translate-y-2 transition duration-500 group-hover:opacity-100 group-hover:translate-y-0 mt-2 font-['Plus_Jakarta_Sans'] font-extralight">
           Every topic is designed with hands on learning, ensuring you can move from understanding concepts to building real solutions.
         </div>
       </div>
 
-      <!-- Card 4 -->
-      <div class="group relative flex flex-col items-center justify-center gap-2 min-h-[200px] p-3 sm:p-4 w-full
-                  text-center rounded-2xl bg-[rgba(5,0,3,0.45)] transition-colors duration-500 
-                  hover:bg-transparent hover:shadow-none overflow-hidden">
-        <div class="flex items-center justify-center mt-8 mb-1 transition-transform duration-300 group-hover:-translate-y-3">
-          <img src="document.png" alt="Document Icon" class="w-9 h-9 object-contain mx-auto mb-2">
+      <!-- card 4 -->
+      <div class="rounded-2xl bg-[rgba(10,8,18,0.6)] p-5 text-center flex flex-col items-center justify-center gap-2 min-h-[160px] relative overflow-hidden transition-transform duration-500 hover:scale-105 hover:bg-transparent group">
+        <div class="mb-1 mt-12 transition-transform duration-500 group-hover:-translate-y-4">
+          <img src="document.png" alt="Education Icon" class="w-10 h-10 object-contain mx-auto mb-2">
         </div>
-        <div class="font-['Plus_Jakarta_Sans'] text-lg sm:text-xl lg:text-2xl font-semibold mb-[-6px] z-10 transition-transform duration-300 group-hover:-translate-y-3">
+        <div class="text-[27px] font-semibold mb-[-11px] transition-transform duration-600 group-hover:-translate-y-4 font-['Plus Jakarta Sans', sans-serif]">
           Education Without Barriers
         </div>
-        <div class="opacity-0 translate-y-3 font-['Plus_Jakarta_Sans'] font-extralight text-sm leading-6 max-w-[270px] text-center break-words
-            transition-all duration-500 ease-out 
-            group-hover:opacity-100 group-hover:translate-y-0">
+        <div class="text-[16px] leading-relaxed text-center max-w-xs opacity-0 translate-y-2 transition duration-500 group-hover:opacity-100 group-hover:translate-y-0 mt-2 font-['Plus_Jakarta_Sans'] font-extralight">
           We are committed to making knowledge universally accessible, giving every learner the chance to grow without limits.
         </div>
       </div>
 
-      <!-- Card 5 -->
-      <div class="group relative flex flex-col items-center justify-center gap-2 min-h-[200px] p-3 sm:p-4 w-full
-                  text-center rounded-2xl bg-[rgba(5,0,3,0.45)] transition-colors duration-500 
-                  hover:bg-transparent hover:shadow-none overflow-hidden">
-        <div class="flex items-center justify-center mt-8 mb-1 transition-transform duration-300 group-hover:-translate-y-3">
-          <img src="people.png" alt="Trust Icon" class="w-9 h-9 object-contain mx-auto mb-2">
+      <!-- card 5 -->
+      <div class="rounded-2xl bg-[rgba(10,8,18,0.6)] p-5 text-center flex flex-col items-center justify-center gap-2 min-h-[160px] relative overflow-hidden transition-transform duration-500 hover:scale-105 hover:bg-transparent group">
+        <div class="mb-1 mt-12 transition-transform duration-500 group-hover:-translate-y-4">
+          <img src="people.png" alt="Trust Icon" class="w-10 h-10 object-contain mx-auto mb-2">
         </div>
-        <div class="font-['Plus_Jakarta_Sans'] text-lg sm:text-xl lg:text-2xl font-semibold mb-[-6px] z-10 transition-transform duration-300 group-hover:-translate-y-3">
+        <div class="text-[27px] font-semibold mb-[-11px] transition-transform duration-600 group-hover:-translate-y-4 font-['Plus Jakarta Sans', sans-serif]">
           Built on Trust
         </div>
-        <div class="opacity-0 translate-y-3 font-['Plus_Jakarta_Sans'] font-extralight text-sm leading-6 max-w-[270px] text-center break-words
-            transition-all duration-500 ease-out 
-            group-hover:opacity-100 group-hover:translate-y-0">
+        <div class="text-[16px] leading-relaxed text-center max-w-xs opacity-0 translate-y-2 transition duration-500 group-hover:opacity-100 group-hover:translate-y-0 mt-2 font-['Plus_Jakarta_Sans'] font-extralight">
           We uphold honesty and transparency, creating a reliable learning space where every learner can thrive.
         </div>
       </div>
 
-      <!-- Card 6 -->
-      <div class="group relative flex flex-col items-center justify-center gap-2 min-h-[200px] p-3 sm:p-4 w-full
-                  text-center rounded-2xl bg-[rgba(5,0,3,0.45)] transition-colors duration-500 
-                  hover:bg-transparent hover:shadow-none overflow-hidden">
-        <div class="flex items-center justify-center mt-8 mb-1 transition-transform duration-300 group-hover:-translate-y-3">
-          <img src="star.png" alt="Community Icon" class="w-9 h-9 object-contain mx-auto mb-2">
+      <!-- card 6 -->
+      <div class="rounded-2xl bg-[rgba(10,8,18,0.6)] p-5 text-center flex flex-col items-center justify-center gap-2 min-h-[160px] relative overflow-hidden transition-transform duration-500 hover:scale-105 hover:bg-transparent group">
+        <div class="mb-1 mt-12 transition-transform duration-500 group-hover:-translate-y-4">
+          <img src="star.png" alt="Community Icon" class="w-10 h-10 object-contain mx-auto mb-2">
         </div>
-        <div class="font-['Plus_Jakarta_Sans'] text-lg sm:text-xl lg:text-2xl font-semibold mb-[-6px] z-10 transition-transform duration-300 group-hover:-translate-y-3">
+        <div class="text-[27px] font-semibold mb-[-11px] transition-transform duration-600 group-hover:-translate-y-4 font-['Plus Jakarta Sans', sans-serif]">
           Connected by Community
         </div>
-        <div class="opacity-0 translate-y-3 font-['Plus_Jakarta_Sans'] font-extralight text-sm leading-6 max-w-[270px] text-center break-words
-            transition-all duration-500 ease-out 
-            group-hover:opacity-100 group-hover:translate-y-0">
+        <div class="text-[16px] leading-relaxed text-center max-w-xs opacity-0 translate-y-2 transition duration-500 group-hover:opacity-100 group-hover:translate-y-0 mt-2 font-['Plus_Jakarta_Sans'] font-extralight">
           Beyond courses, we foster a community where curiosity meets connection, and learning becomes a shared journey.
         </div>
       </div>
